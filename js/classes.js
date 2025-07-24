@@ -40,5 +40,6 @@ class Sprite {
         this.draw();
         this.animateFrame();
     }
+    drawTitle()
 }
 

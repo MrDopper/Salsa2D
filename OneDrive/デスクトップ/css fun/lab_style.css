@@ -1,0 +1,185 @@
+/* CPSC 1030 - Lab 8 CSS */
+/* File: lab_style.css */
+
+/* --- General Body and Layout --- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #cccccc;
+}
+
+header img.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+/* --- Main Content Area (Flexbox for Nav and Main) --- */
+.content-wrapper {
+    display: flex;
+}
+
+/* --- Navigation --- */
+nav {
+    width: 180px;
+    padding: 20px;
+    border-right: 1px solid #cccccc;
+    flex-shrink: 0; /* Prevents nav from shrinking */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #0056b3;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #e9ecef;
+    color: #003875;
+}
+
+/* Class for the current page's link */
+nav ul li a.active {
+    background-color: #0056b3;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+/* --- Main Section --- */
+main {
+    flex-grow: 1; /* Allows main to take up remaining space */
+    padding: 25px;
+    /* This is critical for positioning the large hover image */
+    position: relative;
+}
+
+main h2 {
+    font-size: 1.8em;
+    color: #444;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #cccccc;
+    font-size: 0.9em;
+    color: #666;
+    background-color: #f9f9f9;
+}
+
+
+/* --- Image Gallery Specific Styles (for nature.html) --- */
+
+#image-gallery ul {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Centers the polaroids */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-height: 250px; /* Provides space for hover image to appear */
+}
+
+#image-gallery li {
+    margin: 25px;
+}
+
+/* The link is the hover target and contains both the polaroid and the hidden large image */
+#image-gallery li a {
+    display: block; /* Makes the link a container */
+    text-decoration: none;
+    color: #333;
+}
+
+/* Polaroid Styling (on an inner div to isolate the transform) */
+.polaroid {
+    width: 200px;
+    padding: 10px 10px 20px 10px;
+    background-color: #fff;
+    border: 1px solid #BFBFBF;
+    box-shadow: 5px 5px 8px #aaaaaa;
+}
+
+.polaroid img {
+    width: 100%;
+    display: block; /* Removes bottom space under image */
+}
+
+.polaroid .caption {
+    text-align: center;
+    margin: 15px 0 0 0;
+    font-style: italic;
+    font-family: "Courier New", monospace;
+}
+
+/* Polaroid Rotation Transforms */
+.rotate_right {
+    transform: rotate(7deg);
+}
+
+.rotate_left {
+    transform: rotate(-8deg);
+}
+
+
+/* On-Hover Gallery Effect */
+#image-gallery span {
+    display: none; /* Hide the large image container by default */
+}
+
+/* When the link is hovered, show the span */
+#image-gallery li a:hover span {
+    display: block;
+    position: absolute; /* Position relative to the <main> tag */
+    top: 280px;  /* Position it below the thumbnails */
+    left: 50%;
+    transform: translateX(-50%); /* Horizontally center the image */
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    z-index: 100; /* Ensure it appears on top of other content */
+}
+
+#image-gallery li a:hover span img {
+    /* As per hint, resize large image to about 500px */
+    max-width: 500px;
+    height: auto;
+    display: block;
+}

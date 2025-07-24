@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corbyn Besson | Portfolio</title>
+  <!-- Custom CSS (no frameworks) -->
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --dark: #333;
+      --light-bg: #f9f9f9;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: var(--light-bg);
+      color: var(--dark);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 1rem;
+    }
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    nav a {
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+    section {
+      padding: 4rem 0;
+    }
+    .hero {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #f3f3ff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .chip {
+      background: #fff;
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #666;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    }
+    /* Mobile navigation */
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    @media (max-width: 640px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      nav.open {
+        display: flex;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+    }
+  </style>
+  <script>
+    // Simple mobile navigation toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".mobile-toggle");
+      const nav = document.querySelector("nav");
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => nav.classList.toggle("open"));
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-flex">
+      <h1 style="color: var(--primary); font-weight: 700;">Corbyn Besson</h1>
+      <button class="mobile-toggle">☰</button>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Hi, I'm Corbyn — a budding Programmer</h2>
+      <p style="margin: 1rem 0 2rem;">I enjoy turning ideas into web experiences and interactive games.</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 2rem;">Featured Projects</h3>
+      <div class="grid">
+        <!-- Project Card 1 -->
+        <article class="card">
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Scratch Mini‑Game</h4>
+          <p style="margin-bottom: 1rem;">A fun interactive game built in Scratch demonstrating logic, animation, and user input handling.</p>
+          <a href="https://scratch.mit.edu/projects/1140245098" target="_blank">Play on Scratch →</a>
+        </article>
+        <!-- Project Card 2 -->
+        <article class="card">
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">First Personal Website</h4>
+          <p style="margin-bottom: 1rem;">My very first website, built with pure HTML &amp; CSS, hosted on Langara College servers.</p>
+          <a href="http://mylinux.langara.bc.ca/~ktakuwa00/index.html" target="_blank">Visit site →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" style="background: #f0f0f7;">
+    <div class="container" style="text-align: center;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 2rem;">Skills</h3>
+      <div class="chips">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">Scratch</span>
+        <span class="chip">Teamwork</span>
+        <span class="chip">Communication</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container" style="text-align: center;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Get In Touch</h3>
+      <p style="margin-bottom: 1rem;">Have a project idea or just want to connect? Reach out!</p>
+      <p><strong>Email:</strong> <a href="mailto:corbyn@example.com">corbyn@example.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/corbynbesson" target="_blank">github.com/corbynbesson</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/corbynbesson" target="_blank">linkedin.com/in/corbynbesson</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Corbyn Besson. All rights reserved.
+  </footer>
+</body>
+</html>

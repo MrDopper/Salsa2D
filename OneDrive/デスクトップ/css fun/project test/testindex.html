@@ -1,0 +1,85 @@
+/* hobbies.html */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies - Kei Takuwa</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .hobby-section {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .hobby-text {
+      flex: 2;
+      min-width: 300px;
+    }
+    .hobby-images {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    .hobby-images img {
+      width: 150px;
+      border-radius: 6px;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    }
+    .img-tilt-1 {
+      transform: rotate(-5deg);
+    }
+    .img-tilt-2 {
+      transform: rotate(4deg);
+    }
+    .img-tilt-3 {
+      transform: rotate(-3deg);
+    }
+    .hobby-images-left {
+      order: -1;
+    }
+    .hobby-title {
+  text-align: center;
+  margin-top: rem;
+  position: relative;
+  left: -20%; 
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kei Takuwa Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="hobby-title">Hobbies</h2>
+    <div class="hobby-section">
+      <div class="hobby-images hobby-images-left">
+        <img src="images/park.jpg" alt="Theme Park" class="img-tilt-2">
+      </div>
+      <div class="hobby-text">
+        <p>In my free time, I enjoy a variety of activities that keep me both physically active and mentally refreshed. I'm especially passionate about sports, whether it's playing or watching. Soccer and baseball are my favourites — I follow professional leagues and enjoy casual games with friends whenever possible.</p>
+        <p>Another interest of mine is theme parks. I often watch theme park-related content on YouTube, exploring ride technology, park history, and design from around the world. It's a fun way to learn and stay entertained.</p>
+        <p>To stay active, I regularly do workouts using dumbbells, focusing on strength and general fitness. I also unwind by playing video games, which lets me relax while engaging in creative and strategic ways.</p>
+      </div>
+      <div class="hobby-images">
+        <img src="images/stadium.jpg" alt="Stadium" class="img-tilt-1">
+        <img src="images/controller.jpg" alt="Video Game Controller" class="img-tilt-3">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kei Takuwa</p>
+  </footer>
+</body>
+</html>

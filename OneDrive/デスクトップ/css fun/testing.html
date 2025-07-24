@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fun Page!</title>
+</head>
+<body>
+  <h1 id="greeting">Hello!</h1>
+  <button onclick="doMagic()">Click Me!</button>
+
+  <script>
+    function doMagic() {
+      // 🪟 window - show a popup
+      window.alert("You clicked the button!");
+
+      // 📄 document - change the page
+      document.getElementById("greeting").innerText = "You are awesome!";
+
+      // 🖥️ console - write in your notebook
+      console.log("The button was clicked.");
+    }
+  </script>
+  <form action="demo.php" method="post">
+  <p>Pick your favorite fruit:</p>
+  
+  <input type="checkbox" name="fruit" value="apple"> Apple<br>
+  <input type="checkbox" name="fruit" value="banana"> Banana<br>
+  <input type="checkbox" name="fruit" value="mango"> Mango<br>
+
+  <br>
+  <input type="submit" value="Submit">
+</form>
+<input type="text" tabindex="2" placeholder="Second"><br>
+<input type="text" tabindex="1" placeholder="First"><br>
+<input type="text" tabindex="3" placeholder="Third"><br>
+
+<input type="hidden" name="sendto" id="sendto" 
+value="order@site.com">
+Profile Photo: 
+<input type="file" name="photo" id="photo" accept="images/*">
+ <br>Password: <input type="password" name="pword" 
+id="pword"><br>
+ <select size="1" name="favbrowser" id="favbrowser"> 
+  <option>Select your favorite browser</option> 
+  <option value="Edge">Edge</option> 
+  <option value="Firefox">Firefox</option> 
+  <option value="Chrome">Chrome</option> 
+</select>
+<select size="4" name="jumpmenu" id="jumpmenu"> 
+   <option value="index.html">Home</option> 
+   <option value="products.html">Products</option> 
+   <option value="services.html">Services</option> 
+   <option value="about.html">About</option> 
+   </select><br>
+<input type="image" 
+src="image-thumbs/image-thumbs/moon-thumb.jpg" alt="Login 
+Button">
+<br>
+<button type="submit"> 
+<img src="image-thumbs/image-thumbs/leaf-thumb.jpg" width="80" height="28" alt="Sign 
+up for free 
+newsletter"><br>Sign up for free newsletter 
+</button>
+<br>
+<label>E-mail: <input type="text" name="email" 
+id="email"></label>
+<br>
+<label for="email">E-mail: </label> 
+<input type="text" name="email" id="email">
+<br>
+
+<fieldset> 
+<legend>Billing Address</legend> 
+
+
+
+<label>Street: <input type="text" name="street" 
+id="street" size="54"></label><br><br> 
+
+
+
+<label>City: <input type="text" name="city" id="city">
+ </label> 
+<label>State: <input type="text" name="state" id="state" 
+maxlength="2" 
+       size="5"></label> 
+<label>Zip: <input type="text" name="zip" id="zip" 
+maxlength="5" 
+       size="5"></label> 
+</fieldset>
+ <input type="text" name="email" id="email" 
+accesskey="E">
+<label for="message">Message:</label><br>
+
+
+<textarea name="message" id="message" rows="5" cols="40"></textarea>
+ 
+
+
+<label for="keyword">Search:</label> <br>
+<input type="search" name="keyword" id="keyword">
+<br> 
+<label for="color">Favorite Color:</label> 
+<input type="text" name="color" id="color" list="colors">
+
+<datalist id="colors">
+  <option value="red" label="red"></option>
+  <option value="green" label="green"></option>
+  <option value="blue" label="blue"></option>
+  <option value="yellow" label="yellow"></option>
+  <option value="pink" label="pink"></option>
+  <option value="black" label="black"></option>
+</datalist>
+
+<br>
+<label for="myChoice">Choose a number between 1 and 100:
+ </label><br> 
+Low <input type="range" name="myChoice" id="myChoice" 
+min="1" max="100"> High
+<br>
+<label for="myChoice">Choose a number between 1 and 10:
+ </label> 
+<input type="number" name="myChoice" id="myChoice" 
+min="1" max="10">
+<br><label for="myDate">Choose a Date</label> 
+<input type="date" name="myDate" id="myDate">
+ <label for="myColor">Choose a color:</label><br> 
+
+<input type="color" name="myColor" id="myColor">
+
+</body>
+</html>

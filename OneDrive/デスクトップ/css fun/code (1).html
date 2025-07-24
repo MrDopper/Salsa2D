@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nature Gallery - Doug Kowalski Photography</title>
+    <link rel="stylesheet" href="lab_style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <img src="images/logo.png" alt="Camera Logo" class="logo">
+            <h1>Doug Kowalski</h1>
+        </header>
+
+        <div class="content-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Journals</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="nature.html" class="active">Nature</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <h2>Photos by Doug</h2>
+                <div id="image-gallery">
+                    <ul>
+                        <li>
+                            <!-- Link to the large image for direct access and hover -->
+                            <a href="images/desert.jpg">
+                                <!-- This div gets the polaroid style and rotation -->
+                                <div class="polaroid rotate_left">
+                                    <img src="image-thumbs/image-thumbs/desert-thumb.jpg" alt="A serene mountain lake">
+                                    <p class="caption">Mountain Lake</p>
+                                </div>
+                                <!-- This span is hidden by default and appears on hover -->
+                                <span>
+                                    <img src="images/desert.jpg" alt="Large view of a serene mountain lake">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="images/large/image2-large.jpg">
+                                <div class="polaroid rotate_right">
+                                    <img src="images/thumbs/image2-thumb.jpg" alt="A lush green forest path">
+                                    <p class="caption">Forest Path</p>
+                                </div>
+                                <span>
+                                    <img src="images/large/image2-large.jpg" alt="Large view of a lush green forest path">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="images/large/image3-large.jpg">
+                                <div class="polaroid rotate_left">
+                                    <img src="images/thumbs/image3-thumb.jpg" alt="A vibrant sunset over the ocean">
+                                    <p class="caption">Ocean Sunset</p>
+                                </div>
+                                <span>
+                                    <img src="images/large/image3-large.jpg" alt="Large view of a vibrant sunset over the ocean">
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="images/large/image4-large.jpg">
+                                <div class="polaroid rotate_right">
+                                    <img src="images/thumbs/image4-thumb.jpg" alt="Close-up of a desert flower">
+                                    <p class="caption">Desert Bloom</p>
+                                </div>
+                                <span>
+                                    <img src="images/large/image4-large.jpg" alt="Large view of a close-up of a desert flower">
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p>Copyright Doug Kowalski 2017</p>
+        </footer>
+    </div>
+</body>
+</html>

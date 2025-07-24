@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Status Bar</title>
+
+  <style>
+    /* Status bar container */
+    .status-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #222;
+      color: white;
+      border-bottom: 2px solid #444;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      z-index: 1000;
+    }
+
+    .name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .name img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #666; /* fallback color if no image */
+    }
+
+    .score {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background-size: cover;
+    }
+
+    .full, .half, .empty {
+      background-image: url("https://static.vecteezy.com/system/resources/previews/033/034/173/non_2x/pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector.jpg");
+    }
+
+    main {
+      padding-top: 100px; /* make room for fixed header */
+      text-align: center;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="status-box">
+    <div class="name">
+      <img src="" alt="character_icon" />
+      <h2 style="margin: 0;">Jack</h2>
+      <div class="heart full"></div>
+      <div class="heart half"></div>
+      <div class="heart empty"></div>
+    </div>
+    <div class="score">
+      <div>Score: 000000</div>
+      <div>Time: 000000</div>
+    </div>
+  </div>
+
+  <main>
+    <p>Game content goes here!</p>
+    <p>🎮 Have fun playing!</p>
+  </main>
+</body>
+</html>

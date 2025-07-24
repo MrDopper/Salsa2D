@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>dougsphotos</title>
+<link rel="stylesheet" href="lab6.css">
+<style>
+               
+#gallery { 
+    position: relative; 
+     display: flex; justify-content: center; 
+}
+#gallery ul {  width: 250px;   list-style-type: none; }
+#gallery li {   display: inline-block;    padding: 10px; }
+#gallery img { border-style: none; }
+#gallery a {    
+    text-decoration: none;    
+    color: #333;     
+    font-style: italic; 
+}
+#gallery span { 
+  display: none; 
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  margin-top: 20px;
+  text-align: center;
+}    
+#gallery a:hover span {     
+    display: block;     
+    /* position: relative;
+    text-a
+    align: center;  */
+}
+
+li:hover {
+    margin-bottom: 270px;
+}
+.caption{
+	font-weight: bold;
+	font-family:  "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;;
+	color: white;
+    text-align:center;
+}
+div.bgthumb {
+    width: 130px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: darkred;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+.flower-thumb{
+    /* float:right; */
+    transform: skew(8deg);
+}
+
+.flower-thumb img {
+    transform: skew(0);
+}
+
+.moon-thumb{
+    /* float:left; */
+    transform: skew(-8deg);
+}
+
+.moon-thumb img {
+    transform: skew(0);
+}
+
+ </style>
+        </head>
+        <body>
+
+            <div id="wrapper">
+                <header>
+                    <img id="desert" alt="desert" src="images/desert.jpg">
+                    <h1>Photos by Doug</h1>
+                </header>
+                <div id="whole">
+                    <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Journals</a></li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Nature</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    </nav>
+                    <main>
+                    
+                    <ul id="gallery">
+                        <li>
+                            <a href="images/flower.jpg">
+                               <div class="bgthumb flower-thumb" >
+                                   <img class="flower-thumb" 
+                                    src="image-thumbs/image-thumbs/flower-thumb.jpg" 
+                                    width="100px" height="75px" alt="flower-thumb">
+                                    <p class="caption">flower</p>
+                                    
+                                </div>
+                                
+
+                                <span>
+                                   <img src="images/flower.jpg" 
+                                   width="400px" height="200px" alt="flower">
+                                   <br>flower</p>
+                                </span>
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="images/moon.jpg">
+                               <div class="bgthumb moon-thumb" >
+                                   <img class="moon-thumb" 
+                                    src="image-thumbs/image-thumbs/moon-thumb.jpg" 
+                                    width="100px" height="75px" alt="moon-thumb">
+                                    <p class="caption">flower</p>
+                                </div>
+                               <span>
+                                   <img src="images/moon.jpg" 
+                                   width="400px" height="200px" alt="moon">
+                                   <br>flower</p>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                   
+                
+                    
+                    </main>
+                </div>
+            <footer>
+                <p>Copyright Doug Kowalski 2017</p>
+            </footer>
+            </div>
+        
+            
+        </body>
+        </html>
+

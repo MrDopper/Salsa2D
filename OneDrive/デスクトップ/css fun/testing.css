@@ -1,0 +1,32 @@
+/* Outer layout table */
+#outer-table {
+  width: 90%;
+  margin: 30px auto;
+  border: 1px solid #aaa;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#outer-table caption {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Inner table (sports table) */
+#sports-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#sports-table th,
+#sports-table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#sports-table thead {
+  background-color: lightgray;
+}

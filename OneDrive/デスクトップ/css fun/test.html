@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab6.css">
+    <title>dougsphotos</title>
+</head>
+
+    <style>
+#gallery { position: relative; }
+#gallery ul {    
+    width: 250px;   
+    list-style-type: none; 
+}
+#gallery li {   
+    display: inline-block;    
+    padding: 10px; 
+}
+#gallery img { border-style: none; }
+#gallery a {    
+    text-decoration: none;    
+    color: #333;     
+    font-style: italic; 
+}
+#gallery span { display: none; }    
+#gallery a:hover span {     
+    display: block;     
+    position: relative;    
+    top: 10px;     
+    left: 100px;     
+    text-align: center; 
+    }
+
+ #gallery ul {
+        display: flex;
+    }
+div.bgthumb {
+    width: 130px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: darkred;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    }
+#flower-thumb{
+    transform: skew(8deg);
+}
+flower-thumb img {
+    transform: skew(0);
+}
+</style>
+<body>
+ <div id="wrapper">
+                <header>
+                    <img id="desert" alt="desert" src="images/desert.jpg">
+                    <h1>Photos by Doug</h1>
+                </header>
+                <div id="whole">
+                    <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Journals</a></li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Nature</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    </nav>
+<main>
+<div id="gallery">
+    <ul>
+        <li>  
+            <div class="bgthumb" id="flower-thumb">
+            <a href="images/flower.jpg" >      <img src="image-thumbs/image-thumbs/flower-thumb.jpg" width="125" height="125" alt="mario 1 up mushroom">    
+                <span>   <img src="images/flower.jpg" width="500"  height="498" alt="1 up mushroom">  <br>Flower  </span> 
+            </a>
+            </div>   
+        </li> 
+        <li>  
+            <div class="bgthumb">
+            <a href="images/moon.jpg">      <img src="image-thumbs/image-thumbs/moon-thumb.jpg" width="125" height="125" alt="mario 1 up mushroom">    
+                <span>   <img src="images/moon.jpg" width="500"  height="498" alt="moon">  <br>Moon  </span> 
+            </a> 
+            </div>  
+        </li> 
+         
+    </ul>
+</div>
+    </div>
+    </main>
+            <footer>
+                <p>Copyright Doug Kowalski 2017</p>
+            </footer>
+            </div>
+            <table border="1" height="100">
+  <tr>
+    <td style="vertical-align: top;">Top</td>
+    <td style="vertical-align: middle;">Middle</td>
+    <td style="vertical-align: bottom;">Bottom</td>
+  </tr>
+</table>
+
+        
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 11 – Event Handlers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    #nameAgeOutput {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lab 11 – JavaScript Event Handlers</h1>
+
+  <!-- Exercise 1a -->
+  <h2>Exercise 1a: Click Button</h2>
+  <button onclick="alert('Welcome')">Click Me</button>
+
+  <!-- Exercise 1b -->
+  <h2>Exercise 1b: Mouseover Link</h2>
+  <a href="#" onmouseover="alert('Welcome')">Hover for a welcome message</a>
+
+  <!-- Exercise 1c -->
+  <h2>Exercise 1c: Mouseout Link</h2>
+  <a href="#" onmouseout="alert('Welcome')">Move your mouse pointer here for a welcome message</a>
+
+  <hr>
+
+  <!-- Exercise 4 -->
+  <h2>Exercise 4: Prompt for Name and Age</h2>
+  <p id="nameAgeOutput"></p>
+
+  <script>
+    // Exercise 4 script
+    let userName = prompt("What is your name?");
+    let userAge = prompt("How old are you?");
+    let message = "Welcome, " + userName + "! You are " + userAge + " years old.";
+    document.getElementById("nameAgeOutput").innerText = message;
+  </script>
+
+</body>
+</html>

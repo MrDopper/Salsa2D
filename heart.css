@@ -1,0 +1,19 @@
+.heart {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: cover;
+}
+.full {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/033/034/173/non_2x/pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector.jpg");
+}
+.half {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/033/034/173/non_2x/pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector.jpg');
+}
+.empty {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/033/034/173/non_2x/pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector.jpg');
+}
+.status{
+    display:flex;
+    
+}

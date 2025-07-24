@@ -4,16 +4,31 @@
   display: inline-block;
   background-size: cover;
 }
+
 .full {
   background-image: url("https://static.vecteezy.com/system/resources/previews/033/034/173/non_2x/pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector.jpg");
 }
+
 .half {
   background-image: url('https://static.vecteezy.com/system/resources/previews/033/034/173/non_2x/pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector.jpg');
 }
+
 .empty {
   background-image: url('https://static.vecteezy.com/system/resources/previews/033/034/173/non_2x/pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector.jpg');
 }
-.status{
-    display:flex;
-    
+
+.status-box {
+  border: 2px solid #444;
+
+  margin: 20px auto;
+  height: 70px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+}
+
+.name {
+  display: flex;
+  float: left;
 }

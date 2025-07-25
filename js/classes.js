@@ -1,5 +1,5 @@
 class Sprite {
-    constructor({ position, imageSrc, scale = 1, frame = 1, offset = { x: 0, y: 0 }, timeHold }) {
+    constructor({ position, imageSrc, scale = 1, frame = 1, offset = { x: 0, y: 0 }, timeHold, title, rows, cols, mapData, titleOffset = 0 }) {
         this.position = position; //This is the position of each characters
         this.height = 150;
         this.width = 50;
@@ -11,6 +11,11 @@ class Sprite {
         this.timeHold = timeHold; //Every half of second
         this.timeElapsed = 0; //Time that run through sprite
         this.offset = offset;
+        this.title = title;
+        this.rows = rows;
+        this.cols = cols;
+        this.mapData = mapData;
+        this.titleOffset = titleOffset;
     }
     draw() {
         // If this is a background (frame == 1), stretch image to fill canvas
@@ -36,12 +41,37 @@ class Sprite {
             }
         }
     }
-    update() {
-        this.draw();
-        this.animateFrame();
+    update(ctx) {
+        if (this.mapData) {
+            this.drawTileMap(ctx, this.mapData, this.titleOffset);
+        } else {
+            this.draw();
+            this.animateFrame();
+        }
     }
-    drawTitle() {
-        
+    /**
+     * Draws a tile map to the canvas.
+     * @param {CanvasRenderingContext2D} ctx - The canvas context.
+     * @param {number[][]} mapData - 2D array of tile indices.
+     * @param {number} [tileOffset=0] - Optional offset to add to each tile index.
+     */
+    drawTileMap(ctx, mapData, tileOffset) {
+        if (!this.image.complete) return; // Ensure image is loaded
+        const tilesPerRow = Math.floor(this.image.width / this.title);
+        for (let row = 0; row < this.rows; row++) {
+            for (let col = 0; col < this.cols; col++) {
+                let mapVal = mapData[row][col];
+                if (mapVal === -1 || mapVal === null) continue; // Skip drawing for -1/null
+                const tileIndex = mapVal + tileOffset;
+                const sx = (tileIndex % tilesPerRow) * this.title;
+                const sy = Math.floor(tileIndex / tilesPerRow) * this.title;
+                ctx.drawImage(
+                    this.image,
+                    sx, sy, this.title, this.title, // source x, y, width, height (from tileset)
+                    this.position.x + col * this.title, this.position.y + row * this.title, this.title, this.title // destination x, y, width, height (on canvas)
+                );
+            }
+        }
     }
 }
 
